@@ -6,7 +6,7 @@ workflows:
         - key
       vars:
         KEYSTORE_PATH: '/tmp/keystore.keystore'
-      java:1.8
+      java: 1.8
       node: 12
       npm: 6
     cache:
