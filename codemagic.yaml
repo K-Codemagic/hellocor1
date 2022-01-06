@@ -19,6 +19,15 @@ workflows:
           npm ci
           cvm install 11.0.0
           cvm use 11.0.0   
+      - script: |
+          #!/usr/bin/env bash
+          set -e
+          set -x
+          $ANDROID_SDK_ROOT/tools/bin/sdkmanager --install "build-tools;32.0.0" &&
+          cd /usr/local/share/android-sdk/build-tools/32.0.0 \
+          && mv d8 dx \
+          && cd lib  \
+          && mv d8.jar dx.jar
       - name: Add Android platform
         script: |
           set -x
