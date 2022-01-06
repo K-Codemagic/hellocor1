@@ -19,8 +19,6 @@ workflows:
           npm ci
           cvm install 11.0.0
           cvm use 11.0.0   
-      - script: |
-          $ANDROID_SDK_ROOT/tools/bin/sdkmanager --uninstall 'build-tools;32.0.0'
       - name: Add Android platform
         script: |
           set -x
